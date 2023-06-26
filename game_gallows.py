@@ -1,6 +1,10 @@
 import random
+import nltk
 
-words = ['banana', 'borshch', 'milk', 'apple', 'pine', 'salo', 'sushi']
+nltk.download('words')
+
+words_list = nltk.corpus.words.words()
+words = random.choices(words_list, k=100)
 
 gallows = [["-", "-", "-", "-", "-", "-",],
            [" ", "|", " ", " ", "|", " ",],
